@@ -1,6 +1,6 @@
 [project]
 name = "hydron"
-version = "0.0.0rc1"
+version = "0.0.0"
 description = "Python interface for launching and post-processing magnetohydrodynamic simulations"
 authors = [{name = "Sujay Shankar", email = "sujays2001@gmail.com"}]
 readme = "README.md"
