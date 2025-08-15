@@ -1,6 +1,6 @@
 [project]
 name = "hydron"
-version = "0.0.0"
+version = "0.0.1"
 description = "Python interface for launching and post-processing magnetohydrodynamic simulations"
 authors = [{name = "Sujay Shankar", email = "sujays2001@gmail.com"}]
 readme = "README.md"
@@ -15,8 +15,8 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-test = []
-docs = []
+test = ["pytest"]
+docs = ["mystmd"]
 
 [project.urls]
 repository = "https://github.com/Sujay-Shankar/hydron"

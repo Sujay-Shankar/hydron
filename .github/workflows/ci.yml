@@ -1,0 +1,17 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    name: testing
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: latest
+      - name: Setup testing Python environment
+        run: uv sync --extra test
+      - name: Run tests
+        run: uv run pytest
