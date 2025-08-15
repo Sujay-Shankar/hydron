@@ -4,14 +4,14 @@ on: push
 
 jobs:
   build:
-    name: Testing
+    name: testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: astral-sh/setup-uv@v6
         with:
-          version: "latest"
+          version: latest
       - name: Setup testing Python environment
         run: uv sync --extra test
       - name: Run tests
-        run: uvx pytest
+        run: uv run pytest
