@@ -9,5 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: astral-sh/setup-uv@v6
+      - name: Setup testing Python environment
+        run: uv sync --with test
       - name: Run tests
-        run: uvx --with ".[test]" pytest
+        run: uvx pytest
