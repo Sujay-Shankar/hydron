@@ -31,10 +31,8 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           version: latest
-      - name: Setup documentation Python environment
-        run: uv sync --extra docs
       - name: Build HTML Assets
-        run: uv run myst build --html
+        run: uv run --extra docs myst build --html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: './_build/html'

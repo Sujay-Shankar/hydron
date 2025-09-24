@@ -11,7 +11,5 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           version: latest
-      - name: Setup testing Python environment
-        run: uv sync --extra test
       - name: Run tests
-        run: uv run pytest
+        run: uv run --extra test pytest
